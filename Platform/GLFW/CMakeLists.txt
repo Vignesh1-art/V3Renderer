@@ -1,0 +1,6 @@
+add_library(GLFWWindow GLFWWindow.cpp)
+target_include_directories(GLFWWindow PRIVATE ${CMAKE_SOURCE_DIR}/thirdparty)
+target_include_directories(GLFWWindow PRIVATE ${CMAKE_SOURCE_DIR}/Window)
+set(GLFW_LIB ${CMAKE_SOURCE_DIR}/thirdparty/glfwbin/glfw3.dll)
+target_link_libraries(GLFWWindow PRIVATE glad)
+target_link_libraries(GLFWWindow PRIVATE ${GLFW_LIB})
